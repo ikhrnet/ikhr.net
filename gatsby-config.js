@@ -80,6 +80,8 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: "ikhr-net",
+        protocol: "https",
+        hostname: "ikhr.net",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
