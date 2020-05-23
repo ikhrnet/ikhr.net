@@ -11,7 +11,12 @@ on:
 jobs:
   deploy:
     name: Deploy to S3
-    runs-on: ubuntu-18.04
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04]
+        node: [14]
+
     steps:
       - name: Check out the branch
         uses: actions/checkout@v2
@@ -23,9 +28,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      - name: Print the Node.js version
+        run: node -v
+
       - name: Install npm packages
         run: npm install
+
       - name: Build Gatsby
         run: npm run build
+
       - name: Deploy to S3
         run: npm run deploy
