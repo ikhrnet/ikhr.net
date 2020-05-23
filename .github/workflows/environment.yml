@@ -19,13 +19,9 @@ jobs:
         run: ls -la
       - name: Print Git branches
         run: git branch
-      - name: Print $PATH
+      - name: Print executable paths
         run: echo $PATH
       - name: Print the Node.js version
         run: node -v
       - name: Print Node.js paths 
-        run: which nvm
-      - name: Print the nvm path
         run: which -a node
-      - name: Print the nodenv path
-        run: which -a nodenv
