@@ -25,3 +25,19 @@ jobs:
         run: node -v
       - name: Print Node.js paths 
         run: which -a node
+      - name: print files and folders in /bin
+        run: ls -l /bin
+      - name: Print files and folders in /sbin
+        run: ls -l /sbin
+      - name: Print files and folders in /usr/bin
+        run: ls -l /usr/bin
+      - name: Print files and folders in /usr/sbin
+        run: ls -l /usr/sbin
+      - name: Print files and folders in /usr/local/bin
+        run: ls -l /usr/local/bin
+      - name: Print files and folders in /usr/local/sbin
+        run: ls -l /usr/local/sbin
+      - name: Print the list of apt packages
+        run: apt list
+      - name: Print the list of Linuxbrew packages
+        run: brew list
