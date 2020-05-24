@@ -5,7 +5,7 @@ module.exports = {
       name: `ikhrnet`,
       summary: ``,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `ウェブ開発について調べたことをまとめるブログです。`,
     siteUrl: `https://ikhr.net/`,
     social: {
       twitter: ``,
