@@ -70,9 +70,7 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    >
-      <script data-ad-client="ca-pub-5914029429731939" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </Helmet>
+    />
   )
 }
 
