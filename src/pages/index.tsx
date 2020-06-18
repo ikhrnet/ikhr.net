@@ -7,6 +7,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
+import moment from "moment"
+
 type Data = {
   site: {
     siteMetadata: {
@@ -52,7 +54,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>{moment(node.frontmatter.date).format(`YYYY-MM-DD HH:mm`)}</small>
             </header>
             <section>
               <p
@@ -85,7 +87,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date
             title
             description
           }
