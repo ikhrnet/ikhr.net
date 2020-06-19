@@ -59,7 +59,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
             <section>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
+                  __html: node.excerpt,
                 }}
               />
             </section>
