@@ -1,6 +1,6 @@
 ---
 title: Gatsbyで日本時間の日時を表示する
-date: "2020-06-19T02:30:05.887+09:00"
+date: 2020-06-19T02:30:05.887+09:00
 description: GatsbyのタイムゾーンはUTCになっている。moment.jsを使いJSTに変換する。
 ---
 
