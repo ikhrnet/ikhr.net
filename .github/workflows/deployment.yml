@@ -4,20 +4,24 @@ on:
   push:
     branches:
       - develop
+    paths-ignore:
+      - '.github/**'
   pull_request:
     branches:
       - develop
+    paths-ignore:
+      - '.github/**'
 
 jobs:
-  deploy:
-    name: Deploy to S3
+  build_and_deploy:
+    name: Build the Gatsby site and deploy it to S3
     runs-on: ubuntu-18.04
 
     steps:
       - name: Check out the branch
         uses: actions/checkout@v2
 
-      - name: Use Node.js v14
+      - name: Use Node v14
         uses: actions/setup-node@v1
         with:
           node-version: '14'
@@ -29,12 +33,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-
-      - name: Print the current directory
-        run: pwd
-
-      - name: Print files and directories at the current directory
-        run: ls -l
 
       - name: Install Node dependencies
         run: npm install
