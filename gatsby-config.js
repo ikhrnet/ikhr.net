@@ -6,7 +6,7 @@ module.exports = {
       summary: ``,
     },
     description: `ウェブ開発について調べたことをまとめるブログです。`,
-    siteUrl: `https://ikhr.net/`,
+    siteUrl: `https://ikhr.net`,
     social: {
       twitter: ``,
     },
