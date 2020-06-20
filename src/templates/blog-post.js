@@ -7,11 +7,18 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
 import moment from "moment"
+import config from "../../gatsby-config"
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  let disqusConfig = {
+    url: `${config.siteUrl+location.pathname}`,
+    identifier: post.id,
+    title: post.title,
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -49,6 +56,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         />
         <footer>
           {/* <Bio /> */}
+          <CommentCount config={disqusConfig} placeholder={'...'} />
+          <Disqus config={disqusConfig} />
         </footer>
       </article>
 
