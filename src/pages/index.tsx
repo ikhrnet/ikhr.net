@@ -54,7 +54,9 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   {title}
                 </Link>
               </h3>
-              <small>{moment(node.frontmatter.date).format(`YYYY-MM-DD HH:mm`)}</small>
+              <time dateTime={node.frontmatter.date}>
+                <small>{moment(node.frontmatter.date).format(`YYYY-MM-DD HH:mm`)}</small>
+              </time>
             </header>
             <section>
               <p

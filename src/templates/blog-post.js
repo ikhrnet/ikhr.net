@@ -36,7 +36,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {moment(post.frontmatter.date).format(`YYYY-MM-DD HH:mm`)}
+            <time dateTime={post.frontmatter.date}>
+              {moment(post.frontmatter.date).format(`YYYY-MM-DD HH:mm`)}
+            </time>
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
