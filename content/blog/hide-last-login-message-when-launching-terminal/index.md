@@ -18,7 +18,7 @@ $ touch ~/.hushlogin
 
 hushは、[人差し指を口の前に立てる仕草](https://www.google.com/search?q=hush+gesture&tbm=isch)にも使われる言葉のようです。
 
-`ttysXXX` は擬似端末に割り振られる識別子で、次のコマンドで一覧を確認できます。
+`ttysXXX` は[擬似端末に割り振られる識別子](https://superuser.com/questions/812086/ttysxxx-in-who-command)で、次のコマンドで一覧を確認できます。
 
 ```bash
 $ who
