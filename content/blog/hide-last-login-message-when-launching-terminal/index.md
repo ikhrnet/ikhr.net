@@ -16,7 +16,7 @@ Last login: Wed Aug 12 02:22:15 on ttys000
 $ touch ~/.hushlogin
 ```
 
-hushは、[人差し指を口の前に立てる仕草](https://www.google.com/search?q=hush+gesture)にも使われる言葉のようです。
+hushは、[人差し指を口の前に立てる仕草](https://www.google.com/search?q=hush+gesture&tbm=isch)にも使われる言葉のようです。
 
 `ttysXXX` は擬似端末に割り振られる識別子で、次のコマンドで一覧を確認できます。
 
